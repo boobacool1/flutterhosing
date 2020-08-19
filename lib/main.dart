@@ -82,22 +82,22 @@ class _MyAppState extends State<MyApp> {
             ),
             MyMenuList(
               titre: 'Ville',
-              icon: Icons.person,
+              icon: Icons.arrow_right,
               action: Ville(),
             ),
             MyMenuList(
               titre: 'Commune',
-              icon: Icons.person,
+              icon: Icons.arrow_right,
               action: Commune(),
             ),
             MyMenuList(
               titre: 'Secteur',
-              icon: Icons.person,
+              icon: Icons.arrow_right,
               action: Secteur(),
             ),
             MyMenuList(
-              titre: 'locataire',
-              icon: Icons.person,
+              titre: 'Locataire',
+              icon: Icons.arrow_right,
               action: Locataire(),
             )
           ],
