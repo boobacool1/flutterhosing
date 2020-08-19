@@ -8,6 +8,17 @@ class Ville extends StatefulWidget {
 class _VilleState extends State<Ville> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'VILLE',
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.yellow,
+      ),
+      body: Center(
+        child: Text('VILLE'),
+      ),
+    );
   }
 }
