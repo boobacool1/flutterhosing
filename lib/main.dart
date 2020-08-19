@@ -2,16 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:real_estate_agency/menu/my_menu.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:real_estate_agency/pages/batiment.dart';
+import 'package:real_estate_agency/pages/commune.dart';
 import 'package:real_estate_agency/pages/home.dart';
 import 'package:real_estate_agency/pages/infos.dart';
+import 'package:real_estate_agency/pages/locataire.dart';
 import 'package:real_estate_agency/pages/location.dart';
 import 'package:real_estate_agency/pages/logement.dart';
+import 'package:real_estate_agency/pages/proprietaire.dart';
 import 'package:real_estate_agency/pages/recu.dart';
+import 'package:real_estate_agency/pages/secteur.dart';
+import 'package:real_estate_agency/pages/ville.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: MyApp(),
+    routes: <String, WidgetBuilder>{
+      '/proprietaire': (BuildContext context) => Proprietaire(),
+      '/ville': (BuildContext context) => Ville(),
+      '/commune': (BuildContext context) => Commune(),
+      '/seceteur': (BuildContext context) => Secteur(),
+      '/locataire': (BuildContext context) => Locataire()
+    },
   ));
 }
 
@@ -86,7 +98,7 @@ class _MyAppState extends State<MyApp> {
             MyMenuList(
               titre: 'locataire',
               icon: Icons.person,
-              action: '/propritaire',
+              action: '/locataire',
             )
           ],
         ),
@@ -136,7 +148,7 @@ class _MyAppState extends State<MyApp> {
 class MyMenuList extends StatelessWidget {
   final String titre;
   final IconData icon;
-  final String action;
+  final Object action;
   MyMenuList({this.titre, this.icon, this.action});
   @override
   Widget build(BuildContext context) {
@@ -144,7 +156,10 @@ class MyMenuList extends StatelessWidget {
       child: ListTile(
         leading: Icon(icon),
         title: Text(titre),
-        onTap: () => {},
+        onTap: () => {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => action))
+        },
       ),
     );
   }
