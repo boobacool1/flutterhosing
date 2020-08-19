@@ -8,6 +8,17 @@ class Commune extends StatefulWidget {
 class _CommuneState extends State<Commune> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'COMMUNE',
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.yellow,
+      ),
+      body: Center(
+        child: Text('COMMUNE'),
+      ),
+    );
   }
 }

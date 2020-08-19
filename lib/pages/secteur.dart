@@ -8,6 +8,17 @@ class Secteur extends StatefulWidget {
 class _SecteurState extends State<Secteur> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'SECTEUR',
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.yellow,
+      ),
+      body: Center(
+        child: Text('SECTEUR'),
+      ),
+    );
   }
 }

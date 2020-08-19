@@ -8,6 +8,17 @@ class Locataire extends StatefulWidget {
 class _LocataireState extends State<Locataire> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'LOCATAIRE',
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.yellow,
+      ),
+      body: Center(
+        child: Text('LOCATAIRE'),
+      ),
+    );
   }
 }

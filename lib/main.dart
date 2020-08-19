@@ -78,27 +78,27 @@ class _MyAppState extends State<MyApp> {
             MyMenuList(
               titre: 'Propriétaire',
               icon: Icons.person,
-              action: '/propritaire',
+              action: Proprietaire(),
             ),
             MyMenuList(
               titre: 'Ville',
               icon: Icons.person,
-              action: '/ville',
+              action: Ville(),
             ),
             MyMenuList(
               titre: 'Commune',
               icon: Icons.person,
-              action: '/commune',
+              action: Commune(),
             ),
             MyMenuList(
               titre: 'Secteur',
               icon: Icons.person,
-              action: '/secteur',
+              action: Secteur(),
             ),
             MyMenuList(
               titre: 'locataire',
               icon: Icons.person,
-              action: '/locataire',
+              action: Locataire(),
             )
           ],
         ),

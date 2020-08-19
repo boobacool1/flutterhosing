@@ -8,6 +8,17 @@ class Proprietaire extends StatefulWidget {
 class _ProprietaireState extends State<Proprietaire> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'PROPRIETAIRE',
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Colors.yellow,
+      ),
+      body: Center(
+        child: Text('PROPRIETAIRE'),
+      ),
+    );
   }
 }
