@@ -12,6 +12,7 @@ import 'package:real_estate_agency/pages/proprietaire.dart';
 import 'package:real_estate_agency/pages/recu.dart';
 import 'package:real_estate_agency/pages/secteur.dart';
 import 'package:real_estate_agency/pages/ville.dart';
+import 'package:real_estate_agency/services/ville_service.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -35,6 +36,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
+    //Villeservice().getVilles().then((value) => print("value: $value"));
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -83,7 +85,7 @@ class _MyAppState extends State<MyApp> {
             MyMenuList(
               titre: 'Ville',
               icon: Icons.person,
-              action: '/ville',
+              action: Ville(),
             ),
             MyMenuList(
               titre: 'Commune',
